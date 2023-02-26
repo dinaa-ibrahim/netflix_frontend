@@ -1,0 +1,11 @@
+<div class="card center">
+    <img src={{actor.actorImagePath}} alt="Avatar" style="width:5cm; height:7cm">
+    <div class="container">
+      <h2><b>{{actor.actorName}}</b></h2>
+    </div >
+</div>
+<div class="movies">
+  <ng-container *ngIf="list">
+    <app-movies-section [list]="list" [header]="'Movies:'" [loading]="loading"></app-movies-section>
+  </ng-container>
+</div>

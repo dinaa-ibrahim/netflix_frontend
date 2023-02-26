@@ -1,0 +1,34 @@
+<div class="actors surface-section pb-5">
+  <div class="container mt-8 pt-5 pb-5">
+    <h2 class="mb-8 section-title">{{header}}</h2>
+    <div class="grid">
+      <ng-container *ngIf="loading">
+        <div class="p-1 lg:col-2 col">
+          <p-skeleton shape="circle" size="15rem"></p-skeleton>
+        </div>
+        <div class="lg:col-2 col">
+          <p-skeleton shape="circle" size="15rem"></p-skeleton>
+        </div>
+        <div class="lg:col-2 col">
+          <p-skeleton shape="circle" size="15rem"></p-skeleton>
+        </div>
+        <div class="lg:col-2 col">
+          <p-skeleton shape="circle" size="15rem"></p-skeleton>
+        </div>
+        <div class="lg:col-2 col">
+          <p-skeleton shape="circle" size="15rem"></p-skeleton>
+        </div>
+        <div class="lg:col-2 col">
+          <p-skeleton shape="circle" size="15rem"></p-skeleton>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="actors-container">
+    <ng-container *ngIf="list">
+        <div *ngFor="let item of list" >
+        <app-actor [actor]="item"></app-actor>
+        </div>
+    </ng-container>
+  </div>
+</div>
